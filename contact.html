@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Make an Appointment</title>
+    <link rel="stylesheet" href="contact.css">
+    <script>
+        // JavaScript function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            // Show an alert message
+            alert("Thank you! Your appointment request has been submitted.");
+
+            // Reset the form fields after submission
+            document.getElementById('appointmentForm').reset();
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <h2>Make an Appointment</h2>
+                    <form id="appointmentForm" onsubmit="handleFormSubmit(event)">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+                        <label for="service">Preferred Service</label>
+                        <select id="service" name="service" required>
+                            <option value="Maternity Care">Maternity Care</option>
+                            <option value="Gynecology">Gynecology</option>
+                            <option value="Infertility Treatment">Infertility Treatment</option>
+                            <option value="Postpartum Care">Postpartum Care</option>
+                        </select>
+
+                        <label for="date">Preferred Appointment Date</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Any additional details"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Address:</strong> Matrychaya General Hospital, Main Road (Hospital Road), Beanibazar, Sylhet</p>
+                    <p><strong>Phone:</strong> <a href="tel:+8801810657628">+880 1810 657628</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:matrychaya@gmail.com">matrychaya@gmail.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:matrychaya@yahoo.com">matrychaya@yahoo.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:ikbal@live.com">ikbal@live.com</a></p>
+
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 24 Hours Open</p>
+                    <p>Saturday: 24 Hours Open</p>
+                    <p>Sunday: 24 Hours Open</p>
+
+                    <!-- Embedded Google Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14664.005907882017!2d92.1582698!3d24.8263889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3751a5e7038f1f89%3A0x676ccfd44d742d53!2sMatrychaya%20General%20Hospital!5e0!3m2!1sen!2sbd!4v1697743567851!5m2!1sen!2sbd" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Matrychaya General Hospital.</p>
+        <p>© Copy Rights Reserved to Varshini Golla and Rizwan Syed</p>
+    </footer>
+
+</body>
+</html>

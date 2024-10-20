@@ -1,0 +1,202 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1E3A8A;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: slideDown 1s ease-in-out; /* Slide down animation for header */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #FFC107; /* Color change on hover */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* About Section */
+.about-hospital {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* Fade in animation for about section */
+}
+
+.about-hospital h1 {
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+}
+
+.about-hospital p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+/* Ambulance Services Section */
+.ambulance-services {
+    padding: 80px 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 2s ease-in-out; /* Fade in with upward movement */
+}
+
+.ambulance-services h2 {
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.ambulance-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ambulance-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.ambulance-image:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+.ambulance-description {
+    flex: 1;
+    max-width: 600px;
+}
+
+.ambulance-description p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Doctors Section */
+.our-doctors {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out; /* Doctors section fade-in */
+}
+
+.our-doctors h2 {
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    margin-bottom: 50px;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid layout */
+    gap: 20px;
+}
+
+.doctor {
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.doctor:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+}
+
+.doctor img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for doctor images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.doctor h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .ambulance-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ambulance-image {
+        margin: 0 0 20px 0;
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    .doctor img {
+        height: 250px; /* Reduce height for mobile */
+    }
+}
